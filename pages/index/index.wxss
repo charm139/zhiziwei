@@ -1,7 +1,14 @@
 .container {
     background-color: #F2f2f2;
 }
+/*首页css*/
+.index_main{
+    margin: 0 auto;
+}
+.slide-image{
 
+
+}
 .swiper_box {
     width: 100%;
 }
