@@ -23,14 +23,14 @@
     "backgroundColor": "#292929",
     "list": [{
       "pagePath": "pages/index/index",
-      "iconPath": "images/footer-icon-02.png",
+      "iconPath": "images/footer-icon-01.png",
       "selectedIconPath": "images/emoij/zhizhibang.jpg",
       "text": "真"
     }, {
-      "pagePath": "pages/cart/index",
-      "iconPath": "images/footer-icon-03.png",
+      "pagePath": "pages/classify/index",
+      "iconPath": "images/footer-icon-02.png",
       "selectedIconPath": "images/emoij/zz2.jpg",
-      "text": "之"
+      "text": "@"
     }, {
       "pagePath": "pages/my/index",
       "iconPath": "images/footer-icon-04.png",

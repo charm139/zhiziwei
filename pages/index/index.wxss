@@ -6,8 +6,10 @@
     margin: 0 auto;
 }
 .slide-image{
-
-
+    /*width:390px;*/
+    height:240px;
+    display:inline-block;
+    overflow:hidden;
 }
 .swiper_box {
     width: 100%;

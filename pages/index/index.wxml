@@ -1,30 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-    <view>
-        <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
-                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
-            <block wx:for="{{images}}">
-                <swiper-item>
-                    <image src="{{item}}" class="slide-image"/>
-                </swiper-item>
-            </block>
-        </swiper>
-    </view>
-    <view class="index_main">
-        <scroll-view wx:for="{{images}}">
-            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+
+    <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{images}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="index_main" wx:for="{{images}}">
+        <scroll-view >
+            <image src="{{item}}" class="slide-image" mode="aspectFit"/>
         </scroll-view>
     </view>
-
-    <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{images}}">
-        <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150"/>
-        </swiper-item>
-    </block>
-    </swiper>
-
     <!--old start-->
     <!--<view>
         <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
