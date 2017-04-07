@@ -1,6 +1,6 @@
 <view class="container">
     
-    <view>
+    <!--<view>
         <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
                 autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
             <block wx:for="{{goodsPicsInfo}}">
@@ -14,10 +14,10 @@
     <view class="shopping_container">
         <view class="title">{{shopppingDetails.title}}</view>
         <view class="reason">{{shopppingDetails.reason}}</view>
-    </view>
+    </view>-->
 
     <view>
-        <view></view>
+        <text>敬请期待</text>
     </view>
 
 </view>
