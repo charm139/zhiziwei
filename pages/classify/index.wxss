@@ -17,7 +17,7 @@ page{
 }
 .box_item{
   float: left;
-  /*width: 30%;*/
+  width:230rpx ;
   height: auto;
   display: inline-block;
   margin-top: 2%;

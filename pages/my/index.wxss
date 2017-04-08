@@ -1,5 +1,5 @@
 /**index.wxss**/
-.container {
+/*.container {
   background-color: #F2f2f2;
 }
 .userinfo {
@@ -66,4 +66,14 @@
   background-image: url(../../images/icon-arrowdown.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}*/
+.my_contentss{
+  /*width:100rpx;*/
+}
+.text_content{
+  color: red;
+  margin: 0 auto;
+}
+.tapTest{
+  background: palevioletred;
 }

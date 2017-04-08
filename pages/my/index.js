@@ -1,43 +1,35 @@
-var app = getApp()
-Page( {
+Page({
+  onReady: function (e) {
+    // this.audioCtx = wx.createAudioContext('myAudio');
+    // wx.playBackgroundAudio({
+    //   dataUrl: '../../images/audio/merryyou.mp3',
+    //   title: '丽水',
+    //   coverImgUrl: '../../images/audio/home.png'
+    // })
+    //获取用户信息
+    // var that = this
+    // app.getUserInfo(function(userInfo) {
+    //     that.setData({
+    //         userInfo: userInfo
+    //     })
+    // })
+
+  },
+  
   data: {
-    userInfo: {},
-    projectSource: 'https://github.com/liuxuanqiang/wechat-weapp-mall',
-    userListInfo: [ {
-      icon: '../../images/iconfont-dingdan.png',
-      text: '我的订单',
-      isunread: true,
-      unreadNum: 2
-    }, {
-        icon: '../../images/iconfont-card.png',
-        text: '我的代金券',
-        isunread: false,
-        unreadNum: 2
-      }, {
-        icon: '../../images/iconfont-icontuan.png',
-        text: '我的拼团',
-        isunread: true,
-        unreadNum: 1
-      }, {
-        icon: '../../images/iconfont-shouhuodizhi.png',
-        text: '收货地址管理'
-      }, {
-        icon: '../../images/iconfont-kefu.png',
-        text: '联系客服'
-      }, {
-        icon: '../../images/iconfont-help.png',
-        text: '常见问题'
-      }]
+  },
+  audioPlay: function () {
+    this.audioCtx.play()
+  },
+  audioPause: function () {
+    this.audioCtx.pause()
+  },
+  audio14: function () {
+    this.audioCtx.seek(14)
+  },
+  audioStart: function () {
+    this.audioCtx.seek(0)
   },
 
-  onLoad: function() {
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo( function( userInfo ) {
-      //更新数据
-      that.setData( {
-        userInfo: userInfo
-      })
-    })
-  }
+
 })

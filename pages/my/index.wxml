@@ -1,19 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+  <!--<view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="info_list">
-    <block wx:for="{{userListInfo}}">
-        <view class="weui_cell">
-            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
-            <view class="weui_cell_bd">
-                <view class="weui_cell_bd_p"> {{item.text}} </view>
-            </view>
-            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
-            <view class="with_arrow"></view>
-        </view>
-    </block>
+  </view>-->
+  <view class="my_contentss">
+    <view class="text_content">
+      <text>这里没有你的,除了我。。。</text>
+    </view>
+    <!--<view class="classname">
+      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+    </view>-->
+     <navigator url="../list/index">
+          <view class="tapTest"> Click me! </view>
+     </navigator>
+
   </view>
 </view>
