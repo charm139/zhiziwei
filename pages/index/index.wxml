@@ -1,6 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-
     <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <block wx:for="{{images}}">
             <swiper-item>
@@ -8,10 +7,19 @@
             </swiper-item>
         </block>
     </swiper>
+  
     <view class="index_main" wx:for="{{images}}">
         <scroll-view >
             <image src="{{item}}" class="slide-image" mode="aspectFit"/>
         </scroll-view>
     </view>
-
+      <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{loves}}">
+        <swiper-item>
+            <view class="loveword">
+                {{item}}
+            </view>
+            </swiper-item>
+        </block>
+    </swiper>
 </view>

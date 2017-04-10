@@ -1,12 +1,10 @@
 .container {
     background-color: #F2f2f2;
 }
-/*首页css*/
 .index_main{
     margin: 0 auto;
 }
 .slide-image{
-    /*width:390px;*/
     height:240px;
     display:inline-block;
     overflow:hidden;
@@ -85,4 +83,9 @@ view.text text {
     font-weight: bold;
     text-align: center;
     color: #333;
+}
+.loveword{
+    background-color: #c6cbce;
+    height: 150px;
+    width: 750rpx;
 }

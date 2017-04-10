@@ -20,6 +20,6 @@ page{
   width:230rpx ;
   height: auto;
   display: inline-block;
-  margin-top: 2%;
+  margin-top:1%;
   overflow: hidden;
 }
