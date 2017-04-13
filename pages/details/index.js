@@ -2,27 +2,14 @@
 var app = getApp()
 Page({
     data: {
-        images:[
-            "../../images/marry/emig1.jpg",
-            "../../images/marry/emig2.jpg",
-            "../../images/marry/emig3.jpg",
-            "../../images/marry/emig4.jpg",
-            "../../images/marry/emig5.jpg",
-            "../../images/marry/emig6.jpg",
-            "../../images/marry/emig7.jpg",
-            "../../images/marry/emig8.jpg",
-            "../../images/marry/emig9.jpg",
-            
-        ],
-        details_list:[],
+        post_content:null,
+        post_title:null,
     },
      onLoad: function(options) {
         var that = this
-        
         // 商品详情
         wx.request({
-            url: 'http://bxu2442380578.my3w.com/details.html?term_id=' + options.id,
-            // url: 'http://bxu2442380578.my3w.com/details.html?term_id=3',
+            url: app.globalData.api_url+'details.html?id=' + options.id,
             method: 'GET',
             data: {},
             header: {
@@ -30,7 +17,8 @@ Page({
             },
             success: function(res) {
                  that.setData({
-                     details_list: res.data.data,
+                     post_content: res.data.data.post_content,
+                     post_title: res.data.data.post_title,
                 })
             }
         })

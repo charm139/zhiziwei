@@ -1,64 +1,14 @@
 var app = getApp()
 Page({
     data: {
-        navLeftItems: [
-            {
-                "id": 1,
-                "desc": "宝宝奶粉",
-                "logo": "../../images/emoij/zz2.jpg",
-            },
-            {
-                "id":2,
-                "desc":"第二个",
-                "logo": "../../images/emoij/zhizhibang.jpg",
-            },
-            {
-                "id":3,
-                "desc":"第三个",
-                "logo": "../../images/emoij/charm.jpg",
-            },
-                        {
-                "id": 1,
-                "desc": "宝宝奶粉",
-                "logo": "../../images/emoij/zz2.jpg",
-            },
-            {
-                "id":2,
-                "desc":"第二个",
-                "logo": "../../images/emoij/zhizhibang.jpg",
-            },
-            {
-                "id":3,
-                "desc":"第三个",
-                "logo": "../../images/emoij/charm.jpg",
-            },
-                        {
-                "id": 1,
-                "desc": "宝宝奶粉",
-                "logo": "../../images/emoij/zz2.jpg",
-            },
-            {
-                "id":2,
-                "desc":"第二个",
-                "logo": "../../images/emoij/zhizhibang.jpg",
-            },
-            {
-                "id":3,
-                "desc":"第三个",
-                "logo": "../../images/emoij/charm.jpg",
-            },
-        ],
         lists:[],
-        navRightItems: [],
         curNav: 1,
 		curIndex: 0
     },
     onLoad: function() {
-
         var that = this
-        
         wx.request({
-            url: 'http://bxu2442380578.my3w.com/classify.html',
+            url: app.globalData.api_url+'classify.html',
             method: 'GET',
             data: {},
             header: {

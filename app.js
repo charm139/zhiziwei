@@ -33,5 +33,6 @@ App({
   },
   globalData:{
     userInfo:null,
+    api_url:'http://bxu2442380578.my3w.com/',
   }
 })

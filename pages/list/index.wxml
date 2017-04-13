@@ -1,7 +1,9 @@
 <view class="container">
-    <block wx:for="{{images}}">
+    <block wx:for="{{lists}}">
+    <navigator url="../details/index?id={{item.id}}">
         <view class="brand_item">
-            <image src="{{item}}"></image>
+              {{item.post_title}}
         </view>
+        </navigator>
     </block>
 </view>
