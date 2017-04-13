@@ -1,5 +1,15 @@
 <view class="box_main">
   <view class="box_content">
+    <block wx:for="{{lists}}">
+    <navigator url="../details/index?id={{item.term_id}}">
+        <view class="box_item">
+              <image src="{{item.thumb}}" style="width:100%"></image>
+              <text>"{{item.name}}"</text>
+        </view>
+        </navigator>
+    </block>
+  </view>
+  <!--<view class="box_content">
     <block wx:for="{{navLeftItems}}">
     <navigator url="../details/index?id={{item.id}}">
         <view class="box_item">
@@ -8,5 +18,5 @@
         </view>
         </navigator>
     </block>
-  </view>
+  </view>-->
 </view>

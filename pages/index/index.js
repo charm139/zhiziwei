@@ -23,6 +23,7 @@ Page({
           '我想要和你一起慢慢变老',
           
         ],
+        lists:[],
         indicatorDots: true,
         vertical: false,
         autoplay: true,
@@ -30,12 +31,30 @@ Page({
         duration: 1000,
         loadingHidden: false  
     },
-  onLoad: function () {
-    var that = this
-    app.getUserInfo(function(userInfo){
-      that.setData({
-        userInfo:userInfo
-      })
-    })
-  }
+     onLoad: function() {
+
+        var that = this
+        
+        wx.request({
+            url: 'http://bxu2442380578.my3w.com/classify.html',
+            method: 'GET',
+            data: {},
+            header: {
+                'Accept': 'application/json'
+            },
+            success: function(res) {
+                that.setData({
+                    lists: res.data,
+                })
+            }
+        })
+    },
+  // onLoad: function () {
+  //   var that = this
+  //   app.getUserInfo(function(userInfo){
+  //     that.setData({
+  //       userInfo:userInfo
+  //     })
+  //   })
+  // }
 })

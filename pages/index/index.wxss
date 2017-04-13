@@ -88,4 +88,5 @@ view.text text {
     background-color: #c6cbce;
     height: 150px;
     width: 750rpx;
+    size: 60rpx;
 }

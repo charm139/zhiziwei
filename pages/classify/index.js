@@ -48,11 +48,30 @@ Page({
                 "logo": "../../images/emoij/charm.jpg",
             },
         ],
+        lists:[],
         navRightItems: [],
         curNav: 1,
 		curIndex: 0
     },
+    onLoad: function() {
 
+        var that = this
+        
+        wx.request({
+            url: 'http://bxu2442380578.my3w.com/classify.html',
+            method: 'GET',
+            data: {},
+            header: {
+                'Accept': 'application/json'
+            },
+            success: function(res) {
+                that.setData({
+                    lists: res.data.data,
+                    
+                })
+            }
+        })
+    },
 
     //事件处理函数
     // switchRightTab: function(e) {
