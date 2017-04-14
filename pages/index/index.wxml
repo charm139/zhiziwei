@@ -1,11 +1,13 @@
 <!--index.wxml-->
 <view class="container">
     <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+     <navigator  url="../videos/index">
         <block wx:for="{{images}}">
             <swiper-item>
             <image src="{{item}}" class="slide-image" width="355" height="150" />
             </swiper-item>
         </block>
+        </navigator>
     </swiper>
   
     <view class="index_main" wx:for="{{images}}">

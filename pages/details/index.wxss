@@ -1,3 +1,7 @@
+.ui-title{
+  font-size: 50rpx;
+  margin-bottom: 10px;
+}
 .container{
     flex-direction:column;
     justify-content:center;

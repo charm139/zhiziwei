@@ -1,10 +1,11 @@
-<!--<view class="container">
+<view class="container">
+        <view class="ui-title"><text>{{post_view.post_title}}</text></view>
         <view class="brand_item">
-        {{post_view.post_content}}
+        <text>{{post_view.post_content}}</text>>
         </view>
-</view>-->
+</view>
 
-<!--<view wx:if="{{post_view.prev}}" class="tapTest">
+<view wx:if="{{post_view.prev}}" class="tapTest">
         <navigator  url="../details/index?id={{post_view.prev}}&term_id={{post_view.term_id}}">
         上一篇:{{post_view.prev_title}}
         </navigator>
@@ -13,7 +14,7 @@
         <navigator url="../details/index?id={{post_view.next}}&term_id={{post_view.term_id}}">
         下一篇:{{post_view.next_title}}
         </navigator>
-</view>-->
-<scroll-view bindscrolltolower="">
+</view>
+<!--<scroll-view bindscrolltolower="">
 
-</scroll-view>
+</scroll-view>-->

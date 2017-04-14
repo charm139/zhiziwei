@@ -4,12 +4,13 @@
     "pages/classify/index",
     "pages/my/index",
     "pages/details/index",
-    "pages/list/index"
+    "pages/list/index",
+    "pages/videos/index"
   ],
   "window":{
     "backgroundTextStyle":"white",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "真滋味蛋糕",
+    "navigationBarTitleText": "真真教你说情话",
     "navigationBarBackgroundColor": "#292929",
     "backgroundColor": "#F2f2f2",
     "enablePullDownRefresh": true

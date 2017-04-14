@@ -3,18 +3,8 @@
     <navigator url="../list/index?id={{item.term_id}}">
         <view class="box_item">
               <image src="{{item.thumb}}" style="width:100%"></image>
-              <text>"{{item.name}}"</text>
+              <text>{{item.name}}</text>
         </view>
         </navigator>
     </block>
   </view>
-  <!--<view class="box_content">
-    <block wx:for="{{navLeftItems}}">
-    <navigator url="../details/index?id={{item.id}}">
-        <view class="box_item">
-              <image src="{{item.logo}}" style="width:100%"></image>
-              <text>"{{item.desc}}"</text>
-        </view>
-        </navigator>
-    </block>
-  </view>-->

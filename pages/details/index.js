@@ -3,9 +3,9 @@ var app = getApp()
 Page({
     data: {
         post_view:[],
+        titles:[],
     },
      onLoad: function(options) {
-         console.log(options)
         var that = this
         // 商品详情
         wx.request({
@@ -18,11 +18,21 @@ Page({
             success: function(res) {
                  that.setData({
                      post_view: res.data.data,
-
+                     titles: res.data.data.post_title,
                 })
             }
         })
 
+    },
+    onReady:function(){
+        console.log(titles)
+        wx.setNavigationBarTitle({
+            
+            title: titles,
+        })
+        this.setData({
+            hidden: true
+        })
     },
     onReachBottom: function(options) {
         // Do something when page reach bottom.
