@@ -1,6 +1,6 @@
 <view class="container">
     <block wx:for="{{lists}}">
-    <navigator url="../details/index?id={{item.id}}">
+    <navigator url="../details/index?id={{item.id}}&term_id={{item.term_id}}">
         <view class="brand_item">
               {{item.post_title}}
         </view>

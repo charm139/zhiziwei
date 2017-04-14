@@ -16,10 +16,11 @@ page{
   column-gap: 9px;
 }
 .box_item{
-  float: left;
-  width:230rpx ;
-  height: auto;
+  /*float: left;*/
+  felx-direction:row-reverse;
+  /*width:230rpx ;*/
+  /*height: auto;
   display: inline-block;
   margin-top:1%;
-  overflow: hidden;
+  overflow: hidden;*/
 }

@@ -21,5 +21,11 @@ Page({
             }
         })
 
+    },
+    onShareAppMessage: function () {
+        return {
+        title: '分享一下吧',
+        path: '/page/user?id=123'
+        }
     }
 })
