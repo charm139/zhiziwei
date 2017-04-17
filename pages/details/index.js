@@ -3,9 +3,18 @@ var app = getApp()
 Page({
     data: {
         post_view:[],
-        titles:[],
+        title:[],
     },
      onLoad: function(options) {
+        wx.setNavigationBarTitle({
+            title: options.name,
+            fail: function() {
+                console.log("更改标题失败");
+            },
+            success: function() {
+                console.log("更改标题成功");
+            }
+        });
         var that = this
         // 商品详情
         wx.request({

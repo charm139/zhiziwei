@@ -1,6 +1,6 @@
  <view class="box_content">
     <block wx:for="{{lists}}">
-    <navigator url="../list/index?id={{item.term_id}}">
+    <navigator url="../list/index?id={{item.term_id}}&name={{item.name}}">
         <view class="box_item">
               <image src="{{item.thumb}}" style="width:100%"></image>
               <text>{{item.name}}</text>
