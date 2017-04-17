@@ -1,35 +1,78 @@
+function getRandomColor () {
+ let rgb = []
+ for (let i = 0 ; i < 3; ++i){
+  let color = Math.floor(Math.random() * 256).toString(16)
+  color = color.length == 1 ? '0' + color : color
+  rgb.push(color)
+ }
+ return '#' + rgb.join('')
+}
+
 Page({
-  onReady: function (e) {
-    // this.audioCtx = wx.createAudioContext('myAudio');
-    // wx.playBackgroundAudio({
-    //   dataUrl: '../../images/audio/merryyou.mp3',
-    //   title: '丽水',
-    //   coverImgUrl: '../../images/audio/home.png'
-    // })
-    //获取用户信息
-    // var that = this
-    // app.getUserInfo(function(userInfo) {
-    //     that.setData({
-    //         userInfo: userInfo
-    //     })
-    // })
-
-  },
-  
+ onReady: function (res) {
+  this.videoContext = wx.createVideoContext('myVideo')
+ },
+ inputValue: '',
   data: {
+    src: '',
+  danmuList: [
+   {
+    text: '第 1s 出现的弹幕',
+    color: '#ff0000',
+    time: 1
+   },
+   {
+    text: '第 3s 出现的弹幕',
+    color: '#ff00ff',
+    time: 3
+   },   
+   {
+    text: '耶耶耶',
+    color: '#ff00ff',
+    time: 5
+   },
+    {
+    text: '不知道呢',
+    color: '#ff00ff',
+    time: 10
+   },
+    {
+    text: '哈哈哈',
+    color: '#ff00ff',
+    time: 13
+   },
+    {
+    text: '这是真的',
+    color: '#ff00ff',
+    time: 17
+   },
+   
+  ]
   },
-  audioPlay: function () {
-    this.audioCtx.play()
+ bindInputBlur: function(e) {
+  this.inputValue = e.detail.value
+ },
+  bindButtonTap: function() { //视频下载
+    var that = this
+    wx.chooseVideo({
+      sourceType: ['album', 'camera'],
+      maxDuration: 60,
+      camera: ['front','back'],
+      success: function(res) {
+        that.setData({
+          src: res.tempFilePath
+        })
+      }
+    })
   },
-  audioPause: function () {
-    this.audioCtx.pause()
-  },
-  audio14: function () {
-    this.audioCtx.seek(14)
-  },
-  audioStart: function () {
-    this.audioCtx.seek(0)
-  },
-
-
+ bindSendDanmu: function () {
+  this.videoContext.sendDanmu({
+   text: this.inputValue,
+   color: getRandomColor()
+  })
+ },
+  videoErrorCallback: function(e) {
+   console.log('视频错误信息:');
+   console.log(e.detail.errMsg);
+  }
 })

@@ -90,3 +90,8 @@ view.text text {
     width: 750rpx;
     size: 60rpx;
 }
+.foot_text{
+    margin: 0 auto;
+    color: #6b5b5b;
+    size: 70rpx;
+}

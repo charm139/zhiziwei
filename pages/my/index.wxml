@@ -1,19 +1,24 @@
-<!--index.wxml-->
-<view class="container">
-  <!--<view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>-->
-  <view class="my_contentss">
-    <view class="text_content">
-      <text>这里没有你的,除了我。。。</text>
-    </view>
-    <!--<view class="classname">
-      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
-    </view>-->
-     <navigator url="../list/index">
-          <view class="tapTest"> Click me! </view>
-     </navigator>
+<!--<view class="section tc">
+ <video src="{{src}}"  controls ></video>
+ <view class="btn-area">
+  <button bindtap="bindButtonTap">获取视频</button>
+ </view>
+</view>-->
 
-  </view>
+<!-- 
+ danmu-list:弹幕列表
+ enable-danmu:是否显示弹幕
+ danmu-btn:弹幕按钮
+ controls:是否显示视频控件，并没有什么用
+ -->
+<view class="section tc">
+ <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+ <view class="btn-area">
+  <!--<button bindtap="bindButtonTap">获取视频</button>-->
+  <input bindblur="bindInputBlur" placeholder='这里没有你的，除了我' style="color:#ccc"/>
+  <button bindtap="bindSendDanmu">发送弹幕</button>
+ </view>
 </view>
+
+<!-- 现在的video就下面三个属性 -->
+<video src="" binderror="" hidden></video>

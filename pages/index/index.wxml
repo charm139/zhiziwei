@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-    <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <!--<swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
      <navigator  url="../videos/index">
         <block wx:for="{{images}}">
             <swiper-item>
@@ -9,19 +9,23 @@
         </block>
         </navigator>
     </swiper>
-  
+  -->
+  <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{pictrues}}">
+        <swiper-item>
+            <view class="loveword">
+                <!--{{item.name}}-->
+                <image src="{{item.img}}" class="slide-image" width="355" height="150" />
+            </view>
+            </swiper-item>
+        </block>
+    </swiper>
     <view class="index_main" wx:for="{{images}}">
         <scroll-view >
             <image src="{{item}}" class="slide-image" mode="aspectFit"/>
         </scroll-view>
     </view>
-      <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{loves}}">
-        <swiper-item>
-            <view class="loveword">
-                {{item}}
-            </view>
-            </swiper-item>
-        </block>
-    </swiper>
+    <view class="foot_text" style="magin:0 auto;">
+        <text>美好和未来都在等着你</text>
+    </view>
 </view>
