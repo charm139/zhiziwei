@@ -33,8 +33,8 @@ Page({
     },
     onShareAppMessage: function () {
         return {
-        title: '分享一下吧',
-        path: '/page/user?id=123'
+        title: '真真叫你说情话，体会不一样的风情趴',
+        path: '/pages/index/index'
         }
     }
 })

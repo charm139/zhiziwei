@@ -33,18 +33,10 @@ Page({
         })
 
     },
-    onReady:function(){
-        console.log(titles)
-        wx.setNavigationBarTitle({
-            
-            title: titles,
-        })
-        this.setData({
-            hidden: true
-        })
-    },
-    onReachBottom: function(options) {
-        // Do something when page reach bottom.
-        console.log('circle 下一页');
-    },
+     onShareAppMessage: function () {
+        return {
+        title: '真真叫你说情话，体会不一样的风情趴',
+        path: '/pages/index/index'
+        }
+    }
 })

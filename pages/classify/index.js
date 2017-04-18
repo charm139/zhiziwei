@@ -22,15 +22,11 @@ Page({
             }
         })
     },
-
-    //事件处理函数
-    // switchRightTab: function(e) {
-    //     let id = e.target.dataset.id,
-	// 		index = parseInt(e.target.dataset.index);
-	// 	this.setData({
-	// 		curNav: id,
-	// 		curIndex: index
-	// 	})
-    // }
+    onShareAppMessage: function () {
+        return {
+        title: '真真叫你说情话，体会不一样的风情趴',
+        path: '/pages/index/index'
+        }
+    }
 
 })

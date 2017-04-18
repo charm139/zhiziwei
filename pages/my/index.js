@@ -74,5 +74,11 @@ Page({
   videoErrorCallback: function(e) {
    console.log('视频错误信息:');
    console.log(e.detail.errMsg);
-  }
+  },
+   onShareAppMessage: function () {
+        return {
+        title: '真真叫你说情话，体会不一样的风情趴',
+        path: '/pages/index/index'
+        }
+    }
 })
